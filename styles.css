@@ -1,0 +1,51 @@
+*{ margin: 0; padding: 0; font-family: poppins; text-decoration: none; color: black;}
+
+header .headerContainer{display: flex; justify-content: space-between; align-items: center; position: relative;}
+header .headerContainer .logo img{width: 10em; margin: 1em 1em 1em 2em;}
+header .headerContainer .nav{display: flex; gap: 3em; font-size: 0.9em; font-weight: 500; }
+header .headerContainer .open,.close,.searchIcon{width: 1.5em;}
+header .headerContainer .searchIcon{margin: 1em 2em 1em 1em;}
+header .headerContainer .open,.close,#openMenu,#closeMenu{display: none;}
+
+@media (max-width:1100px) {
+    header .headerContainer .searchIcon{display: none;}
+    header .headerContainer .nav{position: absolute; top: 100%; left: 0; background-color:rgba(255, 255, 255); width: 100%; height: calc(100vh - 100%); flex-direction: column; justify-content: center; align-items: center; font-size: 1.3em; gap: 2.5em; z-index: 9999;}
+    header .headerContainer .open{display: block; margin-right:2em;}
+}
+
+.bodyContainer1{position: relative;}
+.bodyContainer1 img{width: 100%;}
+.bodyContainer1 a{position: absolute; right: 20em; top: 16.5em; color: white; background-color: rgb(207, 0, 0); padding: 0.7em 3.5em;}
+
+.bodyContainer2{text-align: center;}
+.bodyContainer2 h1{margin-top: 1em;}
+.bodyContainer2 .gridContainer{width: 90%; margin-left: auto; margin-right: auto; margin-top: 2em;}
+.bodyContainer2 .gridContainer img{width: 100%; height: auto; }
+.bodyContainer2 .gridContainer{display: grid; grid-template-columns: repeat(auto-fit,minmax(24.4em,1fr)); gap: 1.2em;} 
+.bodyContainer2 .gridContainer .span{grid-column: span 2;}
+
+.bodyContainer3 img{width: 100%; margin-top: 4em;}
+
+.bodyContainer4{text-align: center;}
+.bodyContainer4 h1{margin-top: 1em}
+.bodyContainer4 .cardContainer{display: grid; grid-template-columns: repeat(auto-fit,minmax(24.4em,1fr)); gap: 1.2em; margin-top: 2em; margin: auto 4em;}
+.bodyContainer4 .cardContainer img{width: 100%;}
+.bodyContainer4 .cardContainer .card{height: 30em; background-color: rgb(236, 236, 236);; line-height: 2.5em; text-align: left; margin-bottom: 4em;}
+.bodyContainer4 .cardContainer .card span{font-size: 0.9rem; padding: 2em;}
+.bodyContainer4 .cardContainer .card h3{margin-left: 1.4em;}
+.bodyContainer4 .cardContainer .card p{margin-left: 1.7em;}
+.bodyContainer4 a{border: 1px solid black; padding: 0.8em 4em; margin: 1.5em;}
+.bodyContainer4 .buttons{display: flex;justify-content: center;}
+
+footer{background-color: rgb(236, 236, 236);}
+footer .footerTop{display: flex; justify-content: space-between; align-items: center; margin: auto 4em; margin-top: 4em; padding-top: 1.8em;}
+footer .footerTop input{padding: 0.6em 3em;}
+footer table{width: 91%; margin-left: auto; margin-right: auto; text-align: left;}
+footer table td{padding-top: 1.4em; opacity: 70%;}
+footer table th{padding-top: 4em; opacity: 90%;}
+
+.bodyContainer1,.bodyContainer2,.bodyContainer3,.bodyContainer4{opacity: 0; filter: blur(5px); transform: translateY(10%); transition: all 800ms;}
+.bodyContainer1.on,.bodyContainer2.on,.bodyContainer3.on,.bodyContainer4.on{opacity: 1; filter: blur(0); transform: translateY(0);}
+
+
+
